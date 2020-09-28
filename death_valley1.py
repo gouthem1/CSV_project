@@ -9,7 +9,7 @@ header_row = next(csv_file)
 
 highs = []
 dates = []
-
+lows =[]
 
 
 
@@ -24,8 +24,8 @@ for row in csv_file:
         low=int(row[5])
         current_date = datetime.strptime(row[2], '%Y-%m-%d')
     except ValueError:
-        print(f'Missing data for {current_date')
-    dates.append(current_date)
+        print('Missing data for {current_date')
+
     else:
         highs.append(high)
         lows.append(low)
@@ -42,6 +42,8 @@ plt.plot(dates,lows,c="blue", alpha=0.5)
 
 plt.title("Daily High Temp and low temperatures, July 2018", fontsize=16)
 plt.xlabel("",fontsize=12)
+plt.fill_between(datesm highs, lows, facecolor='blue', alpha=0.1)
+
 plt.ylabel("Temperature (F)", fontsize=16)
 plt.tick_params(axis="both",labelsize=16)
 
