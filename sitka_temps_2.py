@@ -24,7 +24,8 @@ print(x)
 
 for row in csv_file:
     highs.append(int(row[5]))
-    the_date = datetime.strptime()
+    current_date= datetime.strptime(row[2], '%Y-%m-%d')
+    dates.append(current_date)
 
 print(highs)
 

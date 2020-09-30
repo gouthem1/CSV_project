@@ -13,7 +13,7 @@ lows =[]
 
 
 
-x = datetime.strptime('2018-07-01','%Y-%n-%d')
+x = datetime.strptime('2018-07-01','%Y-%m-%d')
 print(x)
 
 
@@ -42,7 +42,7 @@ plt.plot(dates,lows,c="blue", alpha=0.5)
 
 plt.title("Daily High Temp and low temperatures, July 2018", fontsize=16)
 plt.xlabel("",fontsize=12)
-plt.fill_between(datesm highs, lows, facecolor='blue', alpha=0.1)
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 plt.ylabel("Temperature (F)", fontsize=16)
 plt.tick_params(axis="both",labelsize=16)
